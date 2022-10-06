@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Library>
+    <Catalogues>
+        <Technical>
+            <Book>
+                <ISBN>
+                    9780316273800
+                </ISBN>
+                <Title>
+                    The Age of AI: and our Human Future
+                </Title>
+                <Author>
+                    Henry Kissinger, Eric Schmidt, Daniel Huttenlocher
+                </Author>
+            </Book>
+            <Book>
+                <ISBN>
+                    9780262539968
+                </ISBN>
+                <Title>
+                    Technology and Society
+                </Title>
+                <Author>
+                    Jameson M. Wetmore, Deborah G. Johnson
+                </Author>
+            </Book>
+        </Technical>
+        <Cookery>
+            <Book>
+                <ISBN>
+                    9781844885909
+                </ISBN>
+                <Title>
+                    Avoca at Home
+                </Title>
+                <Author>
+                    Avoca
+                </Author>
+            </Book>
+            <Book>
+                <ISBN>
+                    9780007259717
+                </ISBN>
+                <Title>
+                    Home Cooking
+                </Title>
+                <Author>
+                    Rachel Allen
+                </Author>
+            </Book>
+        </Cookery>
+    </Catalogues>
+</Library>
