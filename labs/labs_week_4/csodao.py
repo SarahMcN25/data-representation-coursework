@@ -1,4 +1,4 @@
-# This prog
+# This prog retrieves data from cso and stores in json file
 
 # Import relevent modules
 from ast import Pass
