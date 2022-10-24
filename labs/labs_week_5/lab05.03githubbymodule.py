@@ -1,7 +1,7 @@
 # Based on week 5 labs for data rep. 
 
 from github import Github
-from data-represenatation-coursework import config as cfg
+from config import config as cfg
 import requests
 import urllib.parse
 
