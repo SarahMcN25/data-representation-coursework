@@ -1,0 +1,100 @@
+<html>
+	 <head>
+	 
+		 <title>
+			test create, update and delete
+		 </title>
+		 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		
+	 </head>
+	 
+	 <body>
+	 
+	<script>
+
+		function createBook(book, callback){
+			//console.log(JSON.stringify(book));
+			$.ajax({
+				"url": " http://andrewbeatty1.pythonanywhere.com/books",
+				"method":"POST",
+				"data":JSON.stringify(book),
+				"dataType": "JSON",
+				contentType: "application/json; charset=utf-8",
+				"success":function(result){
+					//console.log(result);
+					callback(result)
+				
+				},
+				"error":function(xhr,status,error){
+					console.log("error: "+status+" msg:"+error);
+				}
+			});
+		}
+
+		function processCreateResponse(result){
+			console.log(result)
+		}
+		
+		book = {"Title":"javascript", "Author":"Andrew", "Price":12}
+		createBook(book, processCreateResponse)
+		
+		
+		function updateBook(book, callback){
+			//console.log(JSON.stringify(book));
+			$.ajax({
+				"url": " http://andrewbeatty1.pythonanywhere.com/books",
+				"method":"PUT",
+				"data":JSON.stringify(book),
+				"dataType": "JSON",
+				contentType: "application/json; charset=utf-8",
+				"success":function(result){
+					//console.log(result);
+					callback(result)
+				
+				},
+				"error":function(xhr,status,error){
+					console.log("error: "+status+" msg:"+error);
+				}
+			});
+		}
+		
+		function processUpdateResponse(result){
+			console.log(result)
+		}
+		
+		book = {id:155, "Price":999}
+		updateBook(book, processUpdateResponse)
+	
+		
+		
+		
+		
+		function deleteBook(book, callback){
+			//console.log(JSON.stringify(book));
+			$.ajax({
+				"url": " http://andrewbeatty1.pythonanywhere.com/books",
+				"method":"DELETE",
+				"data":"",
+				"dataType": "JSON",
+				contentType: "application/json; charset=utf-8",
+				"success":function(result){
+					//console.log(result);
+					callback(result)
+
+				},
+				"error":function(xhr,status,error){
+					console.log("error: "+status+" msg:"+error);
+				}
+			});
+		}
+		
+		function processDeleteResponse(result){
+			console.log("in process delete")
+			console.log(result)
+		}
+		
+		deleteBook(155, processUpdateResponse)
+		
+	</script>
+</html>
